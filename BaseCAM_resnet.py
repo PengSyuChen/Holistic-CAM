@@ -3,12 +3,14 @@ import torch.nn.functional as F
 import copy
 
 class MultiScalBaseCAM:
-    def __init__(self, model, feature_module, get_bottleneck = False, target_bottleneck=None, get_conv=False, target_conv=None, inputResolutions=None):
+    def __init__(self, model, feature_module, get_bottleneck = False, target_bottleneck=None, get_layer=None, target_layer=None, get_conv=False, target_conv=None, inputResolutions=None):
         self.model = model
         self.inputResolutions = inputResolutions
         self.feature_module = feature_module
         self.get_bottleneck = get_bottleneck
         self.target_bottleneck = target_bottleneck
+        self.get_layer = get_layer # Useless, to be consistent with mobilenet. The Value is always none.
+        self.target_layer = target_layer # Useless too.
         self.get_conv = get_conv
         self.target_conv = target_conv
 

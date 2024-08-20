@@ -23,7 +23,7 @@ class HolisticCAM():
         grad_t_2 = grad_1 * grad_1
         grad_t_3 = grad_t_2 * grad_1
         a_kc = grad_t_2 / (2 * grad_t_2 + A_s * grad_t_3 + eps) # ref to GradCAM++
-        a_kc = torch.where(grads !=0, a_kc, 0)
+        a_kc = torch.where(grads != 0, a_kc, 0)
         a_kc = torch.sum(a_kc, dim=0)
         W_kc = grads * a_kc # element-wise weighting, Eq.8
         return W_kc
@@ -75,7 +75,7 @@ class HolisticCAM():
         primaryAttributionMap = (fusedWeights * fusedAcitvationMaps)[0].sum(dim=0, keepdim=False)
         return primaryAttributionMap, fundamentalScaleMask
 
-    def holistic_CAM(self, classOfInterest=None, gradient_enhance=True, denosing=False, blurSize=None, ksize=None):
+    def holistic_CAM(self, classOfInterest=None, gradient_enhance=True, denosing=False, blurSize=51, ksize=(91,91)):
         primaryAttributionMap, fundamentalScaleMask = self.PHA_Generation(classOfInterest, gradient_enhance)
         if denosing:
             holisticCAM = self.FSD(primaryAttributionMap, fundamentalScaleMask, blurSize, ksize)

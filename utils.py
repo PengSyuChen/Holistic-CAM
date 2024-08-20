@@ -13,7 +13,7 @@ import cv2
 import gc
 import matplotlib.cm as cm
 import BaseCAM_resnet
-
+import BaseCAM_mobilenet
 
 def load_model(model_name):
     global model, BaseCAMs
