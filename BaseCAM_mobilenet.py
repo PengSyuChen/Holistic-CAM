@@ -28,24 +28,7 @@ class MultiScalBaseCAM:
 
         def backward_hook(module, grad_input, grad_output):
             self.gradientsDict[inputResolution] = (copy.deepcopy(grad_output[0].clone().detach().cpu()))
-        '''
-        (17): InvertedResidual(
-              (conv): Sequential(
-                      (0): Conv2dNormActivation(
-                           (0): Conv2d(160, 960, kernel_size=(1, 1), stride=(1, 1), bias=False)
-                           (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-                           (2): ReLU6(inplace=True)
-                      )
-                      (1): Conv2dNormActivation(
-                          (0): Conv2d(960, 960, kernel_size=(3, 3), stride=(1, 1), padding=(1, 1), groups=960, bias=False)
-                          (1): BatchNorm2d(960, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-                          (2): ReLU6(inplace=True)
-                      )
-                     (2): Conv2d(960, 320, kernel_size=(1, 1), stride=(1, 1), bias=False)
-                     (3): BatchNorm2d(320, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-              )
-        )
-        '''
+       
         for module_name, module in self.model._modules.items():
             if module_name == 'features':  # features
                 for block_name, block in module._modules.items():
