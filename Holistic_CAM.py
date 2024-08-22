@@ -18,13 +18,13 @@ class HolisticCAM():
     def PGE(self, activations, grads):
         grad_1 = grads
         sum_acitvations = torch.sum(activations[0], dim=(1, 2))
-        eps = 0.00001
+        eps = 0.000001
         A_s = sum_acitvations[..., None, None]
         grad_t_2 = grad_1 * grad_1
         grad_t_3 = grad_t_2 * grad_1
         a_kc = grad_t_2 / (2 * grad_t_2 + A_s * grad_t_3 + eps) # ref to GradCAM++
-        a_kc = torch.where(grads != 0, a_kc, 0)
-        a_kc = torch.sum(a_kc, dim=0)
+        a_kc = torch.where(grads != 0, a_kc, 0) # torch.Size([1, 2048, 7, 7])
+        a_kc = a_kc[0] # torch.Size([2048, 7, 7]), remove the dimension of batch_size
         W_kc = grads * a_kc # element-wise weighting, Eq.8
         return W_kc
 
