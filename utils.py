@@ -1,16 +1,9 @@
 import numpy as np
-import pandas as pd
 import torch
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputSoftmaxTarget
 import warnings
-
 warnings.filterwarnings('ignore')
-import torch.backends.cudnn as cudnn
 import torchvision.models as models
-import torch.nn.functional as F
-import copy
 import cv2
-import gc
 import matplotlib.cm as cm
 import BaseCAM_resnet
 import BaseCAM_mobilenet
@@ -20,7 +13,7 @@ def load_model(model_name):
     assert model_name in ['resnet18', 'resnet34', 'resnet50', 'resnet101', 'resnet152',
                           'vgg16', 'vgg19', 'densenet121', 'denesnet169', 'inception_v3',
                           'mobilenetV2', 'mobilenetV3s', 'mobilenetV3l',] , \
-        'Current available model: resnet18, resnet34, resnet50, resnet101, resnet152, vgg16, vgg19, densenet121, denesnet169, inception_v3, mobilenetV2, mobilenetV3s, mobilenetV3l'
+        'Current available model: resnet18, resnet34, resnet50, resnet101, resnet152, vgg16, vgg19, mobilenetV2, mobilenetV3s, mobilenetV3l'
 
     if 'resnet' in model_name:
         BaseCAMs = BaseCAM_resnet
@@ -66,24 +59,6 @@ def preprocess_image(img):
     image = np.ascontiguousarray(np.transpose(image, (2, 0, 1)))
     image = image[np.newaxis, ...]
     return torch.tensor(image, requires_grad=True)
-def normalize(Ac):
-    Ac_shape = Ac.shape
-    AA = Ac.view(Ac.size(0), -1)
-    AA -= AA.min(1, keepdim=True)[0]
-    AA /= AA.max(1, keepdim=True)[0]
-    scaled_ac = AA.view(Ac_shape)
-    return scaled_ac
-def tensor2image(x, i=0):
-    x = normalize(x)
-    x = x[i].detach().cpu().numpy()
-    x = cv2.resize(np.transpose(x, (1, 2, 0)), (224, 224))
-    return x
-def threshold(x):
-    mean_ = x.mean()
-    std_ = x.std()
-    thresh = mean_ + std_
-    x = (x > thresh)
-    return x
 def deprocess_image(img):
     img = img - np.mean(img)
     img = img / (np.std(img) + 1e-5)
@@ -133,21 +108,15 @@ def visualizing_CAM(img, mask, work_type='GBR'):
         print('Error')
 def show_cam_on_img_GBR(img, mask):
     heatmap = cv2.applyColorMap(np.uint8(255 * mask), cv2.COLORMAP_JET)
-    heatmap = np.float32(heatmap) / 255
-    cam = heatmap + np.float32(img)
+    cam = np.float32(heatmap) / 255 + 1 * np.float32(img)
     cam = cam / np.max(cam)
     camImg = np.uint8(255 * cam)
     camImg = camImg[:, :, ::-1]
     return camImg
 def show_cam_on_img_Seismic(img, mask):
-    heatmap = cm.seismic(mask)
-    heatmap = np.uint8(heatmap * 255)
-    heatmap = cv2.cvtColor(heatmap, cv2.COLOR_RGBA2BGR)
+    heatmap = cv2.cvtColor(np.uint8(cm.seismic(mask) * 255), cv2.COLOR_RGBA2BGR)
     cam = 1.0 * np.float32(heatmap / 255) + 1 * np.float32(img)
     cam = cam / np.max(cam)
     camImg = np.uint8(255 * cam)
     camImg = camImg[:, :, ::-1]
     return camImg
-
-
-
