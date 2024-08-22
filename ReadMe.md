@@ -31,7 +31,7 @@ No more other requirements
 ## 🗝️ How to Run
 
 ```
-run demo.ipynb
+use demo.ipynb
 ```
 ## ✏️ Citation
 ```bibtex
