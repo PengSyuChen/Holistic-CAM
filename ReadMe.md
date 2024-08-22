@@ -1,32 +1,40 @@
 # Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
 
-This is implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
+Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
 <p style="text-align: center">
 <img src="figures/firstFigure.jpg" style="width: 600px; height: auto">
 </p>
  
 
 
-### Pipeline of Holistic-CAM:
+## 😄 Pipeline of Holistic-CAM:
 <p style="text-align: center">
 <img src="figures/pipeline_new.jpg" style="width: 800px; height: auto">
 </p>
 
 
 
-### Compare with SOTA methods:
+## 🔥 Compare with SOTA methods:
 <p style="text-align: center">
 <img src="figures/allCompare.jpg" style="width: 800px; height: auto">
 </p>
 
-### Requirements
-- python 3.X
-- pytorch (including torchvision)
-- matplotlib
-- No more other requirements
-
-### Citation
+## 🛠️ Requirements
 ```
+python 3.X
+pytorch (including torchvision)
+matplotlib
+opencv-python
+No more other requirements
+```
+
+## 🗝️ How to Run
+
+```
+run demo.ipynb
+```
+## ✏️ Citation
+```bibtex
 @inproceedings{chen2024holisticcam, 
    title={Holistic-{CAM}: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of {CNN}s}, 
    author={Pengxu Chen and Huazhong Liu and Jihong Ding and Jiawen Luo and Peng Tan and Laurence T. Yang}, 
