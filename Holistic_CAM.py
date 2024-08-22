@@ -18,7 +18,7 @@ class HolisticCAM():
     def PGE(self, activations, grads):
         grad_1 = grads
         sum_acitvations = torch.sum(activations[0], dim=(1, 2))
-        eps = 0.000001
+        eps = 0.00001
         A_s = sum_acitvations[..., None, None]
         grad_t_2 = grad_1 * grad_1
         grad_t_3 = grad_t_2 * grad_1
