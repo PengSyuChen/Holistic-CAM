@@ -1,6 +1,6 @@
 # Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
 
-This is implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM 2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
+This is implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
 <p style="text-align: center">
 <img src="figures/firstFigure.jpg" style="width: 600px; height: auto">
 </p>
@@ -19,7 +19,11 @@ This is implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visu
 <img src="figures/allCompare.jpg" style="width: 800px; height: auto">
 </p>
 
-
+### Requirements
+- python 3.X
+- pytorch (including torchvision)
+- matplotlib
+- No more other requirements
 
 ### Citation
 ```
