@@ -16,7 +16,7 @@ Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visu
 
 ## 🔥 Compare with SOTA methods:
 <p style="text-align: center">
-<img src="figures/allCompare.jpg" style="width: 800px; height: auto">
+<img src="figures/allCompare_2.jpg" style="width: 800px; height: auto">
 </p>
 
 ## 🛠️ Requirements
