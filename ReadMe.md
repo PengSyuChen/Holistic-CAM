@@ -22,7 +22,7 @@ Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visu
 ## 🛠️ Requirements
 ```
 python 3.X
-pytorch (including torchvision)
+pytorch >= 1.5 (including torchvision)
 matplotlib
 opencv-python
 No more other requirements
