@@ -2,7 +2,7 @@
 
 Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
 <p style="text-align: center">
-<img src="figures/firstFigure.jpg" style="width: 600px; height: auto">
+<img src="figures/firstFigure.jpg" style="width: 500px; height: auto">
 </p>
  
 
