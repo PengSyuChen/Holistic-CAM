@@ -19,7 +19,7 @@ Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visu
 <img src="figures/allCompare_2.jpg" style="width: 800px; height: auto">
 </p>
 
-## 🛠️ Requirements
+## 🛠️ Requirements:
 ```
 python 3.X
 pytorch >= 1.5 (including torchvision)
@@ -28,12 +28,11 @@ opencv-python
 No more other requirements
 ```
 
-## 🗝️ How to Run
-
+## 🗝️ How to Run:
 ```
 use demo.ipynb
 ```
-## ✏️ Citation
+## ✏️ Citation:
 ```bibtex
 @inproceedings{chen2024holisticcam, 
    title={Holistic-{CAM}: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of {CNN}s}, 
@@ -43,4 +42,5 @@ use demo.ipynb
    url={https://openreview.net/forum?id=O9Vuj6lzya} 
 }
 ```
-
+## 📁 Supplementary material:
+Due to the page limitations of ACM, we have placed the remaining ablation stduy and complete experimental results in supplementary.pdf.
