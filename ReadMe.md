@@ -39,8 +39,9 @@ use demo.ipynb
    author={Pengxu Chen and Huazhong Liu and Jihong Ding and Jiawen Luo and Peng Tan and Laurence T. Yang}, 
    booktitle={Proceeding of the ACM Intertional Conference on Multimedia}, 
    year={2024}, 
-   url={https://openreview.net/forum?id=O9Vuj6lzya} 
+   url={https://openreview.net/forum?id=O9Vuj6lzya},
+   dio={10.1145/3664647.3681707} 
 }
 ```
 ## 📁 Supplementary material:
-Due to the page limitations of ACM, we have placed the remaining ablation stduy and complete experimental results in the **supplementary.pdf**.
+Due to the page limitations of MM, we have placed the remaining ablation stduy and complete experimental results in the **supplementary.pdf**.
