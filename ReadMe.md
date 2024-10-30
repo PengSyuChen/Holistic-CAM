@@ -38,9 +38,9 @@ use demo.ipynb
    title={Holistic-{CAM}: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of {CNN}s}, 
    author={Pengxu Chen and Huazhong Liu and Jihong Ding and Jiawen Luo and Peng Tan and Laurence T. Yang}, 
    booktitle={Proceeding of the ACM Intertional Conference on Multimedia}, 
-   year={2024}, 
-   url={https://openreview.net/forum?id=O9Vuj6lzya},
-   dio={10.1145/3664647.3681707} 
+   year={2024},
+   pages={5423–5431},
+   dio={10.1145/3664647.3681707}
 }
 ```
 ## 📁 Supplementary material:
