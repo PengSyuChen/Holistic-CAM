@@ -40,7 +40,7 @@ use demo.ipynb
    booktitle={Proceeding of the ACM Intertional Conference on Multimedia}, 
    year={2024},
    pages={5423–5431},
-   dio={10.1145/3664647.3681707}
+   doi={10.1145/3664647.3681707}
 }
 ```
 ## 📁 Supplementary material:
