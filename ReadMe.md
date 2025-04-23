@@ -1,6 +1,7 @@
-# Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
+![image](https://github.com/user-attachments/assets/b5225fe9-d24c-49e3-875c-a5f124e5e439)# Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
 
-**[ACM MM 2024]** Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs [paper](https://dl.acm.org/doi/10.1145/3664647.3681707 "link").
+**[ACM MM 2024]** Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs. [link](https://dl.acm.org/doi/10.1145/3664647.3681707 "link")
+
 <p style="text-align: center">
 <img src="figures/firstFigure.jpg" style="width: 500px; height: auto">
 </p>
