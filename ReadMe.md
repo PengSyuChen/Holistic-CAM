@@ -1,6 +1,6 @@
 # Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs
 
-Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://openreview.net/forum?id=O9Vuj6lzya "link").
+Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visual Interpretation in Holistic Stage of CNNs**, which is accepted by [ACM MM2024](https://doi.org/10.1145/3664647.3681707 "link").
 
 
 <p style="text-align: center">
