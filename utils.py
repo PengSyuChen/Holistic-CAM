@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 import torch
-from pytorch_grad_cam.utils.model_targets import ClassifierOutputSoftmaxTarget
+# from pytorch_grad_cam.utils.model_targets import ClassifierOutputSoftmaxTarget
 import warnings
 
 warnings.filterwarnings('ignore')
