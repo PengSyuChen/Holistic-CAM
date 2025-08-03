@@ -24,10 +24,10 @@ Pytorch implementation of **Holistic-CAM: Ultra-lucid and Sanity Preserving Visu
 ## 🛠️ Requirements:
 ```
 python 3.X
+jupyter notebook
 pytorch >= 1.5 (including torchvision)
 matplotlib
 opencv-python
-No more other requirements
 ```
 
 ## 🗝️ How to Run:
@@ -51,3 +51,4 @@ Due to the page limitations of MM, we have placed the remaining ablation stduy a
 
 ## ✉ Contact:
 Any questions can be asked at [chenpx@hainanu.edu.cn](mailto:chenpx@hainanu.edu.cn)
+
